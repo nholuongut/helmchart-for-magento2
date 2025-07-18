@@ -1,0 +1,44 @@
+name: magento
+apiVersion: v2
+appVersion: 2.4.7
+version: 2.7.3
+description: Magento chart to deploy the application including services.
+type: application
+keywords:
+- magento
+- ecommerce
+- nholuongut
+maintainers:
+  - name: Nho Luong
+    url: https://github.com/nholuongut/nholuong
+home: https://github.com/nholuongut/helmchart-for-magento2.git
+icon: https://github.com/magento/magento2/blob/2.4-develop/lib/web/images/logo.svg
+dependencies:
+  - name: mariadb
+    repository: https://charts.bitnami.com/bitnami
+    version: ~11.0.0
+    condition: mariadb.enabled
+  - name: redis
+    repository: https://charts.bitnami.com/bitnami
+    version: ~16.13.0
+    condition: redis.enabled
+  - name: elasticsearch
+    repository: https://helm.elastic.co
+    version: ~7.17.0
+    condition: elasticsearch.enabled
+  - name: opensearch
+    repository: https://opensearch-project.github.io/helm-charts/
+    version: ~1.23.0
+    condition: opensearch.enabled
+  - name: varnish
+    repository: https://charts.softonic.io
+    version: 0.18.6
+    condition: varnish.enabled
+  - name: rabbitmq
+    repository: https://charts.bitnami.com/bitnami
+    version: ~11.16.2
+    condition: rabbitmq.enabled
+  - name: imgproxy
+    version: ~0.9.0
+    repository: https://helm.imgproxy.net/
+    condition: imgproxy.enabled
