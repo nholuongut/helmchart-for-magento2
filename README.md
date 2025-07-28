@@ -444,4 +444,4 @@ This guide and the `values_gke.yaml` file are configured for the *magento.nholuo
 * [Linkedin](https://www.linkedin.com/in/nholuong/)
 
 ![](https://i.imgur.com/waxVImv.png)
-![](Donate.png)
+![](Donate.jpg)
